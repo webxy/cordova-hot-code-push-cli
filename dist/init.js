@@ -151,3 +151,4 @@ function done(err) {
   console.log('If you wish to exclude files from being published, specify them in .chcpignore');
   console.log('Before you can push updates you need to run "cordova-hcp login" in project directory');
 }
+//# sourceMappingURL=init.js.map

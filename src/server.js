@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: xuyuan
+ * @Date: 2023-03-17 16:48:20
+ * @LastEditors: xuyuan
+ * @LastEditTime: 2023-03-23 11:03:08
+ */
 (function(){
   var path = require('path'),
       envFile = path.join(process.cwd(), '.chcpenv'),
@@ -34,6 +41,7 @@
   }
 
   function execute(context) {
+    console.log('start')
     chcpContext = context;
     ignoredFiles = context.ignoredFiles;
     chcpContext.argv.localdev = true;
@@ -177,7 +185,6 @@
   function publicTunnel(port, options){
     var publicTunnelDfd = Q.defer(),
         ngrok = require('ngrok');
-
     // And make it accessible from the internet
     ngrok.connect(port, function (err, url) {
       if (err) {
